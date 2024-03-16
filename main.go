@@ -7,12 +7,12 @@ import (
 
 func getInitials(n string) (string, string) {
 
-	s := strings.ToUpper(n)
-	names := strings.Split(s, " ")
+	sisi := strings.ToUpper(n)
+	names := strings.Split(sisi, " ")
 	var initials []string
 
-	for _, v := range names {
-		initials = append(initials, v[:1])
+	for _, value := range names {
+		initials = append(initials, value[:1])
 	}
 	if len(initials) > 1 {
 		return initials[0], initials[1]
@@ -21,12 +21,12 @@ func getInitials(n string) (string, string) {
 }
 
 func main() {
-	fn1, sn1 := getInitials("soccer poker")
-	fmt.Println(fn1, sn1)
+	ln, mn := getInitials("soccer poker")
+	fmt.Println(ln, mn)
 
-	fn2, sn2 := getInitials("cloud strife")
-	fmt.Println(fn2, sn2)
+	ln1, mn1 := getInitials("cloud strife")
+	fmt.Println(ln1, mn1)
 
-	fn3, sn3 := getInitials("baby")
-	fmt.Println(fn3, sn3)
+	ln2, mn2 := getInitials("baby")
+	fmt.Println(ln2, mn2)
 }
